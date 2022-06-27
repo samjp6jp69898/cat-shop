@@ -9,7 +9,7 @@ import ig from "./logo/instagram.png";
 import line2 from "./logo/line2.png";
 import catbg from "./logo/貓咪背景圖.png";
 import { useState } from "react";
-import { navitem } from "./navitems";
+import { can } from "./navitems";
 
 function App() {
   const [showinfo, setShowinfo] = useState("");
@@ -45,9 +45,40 @@ function App() {
       <div className="container">
         <div className="navbar">
           <div className="nav-items">
-            <h2 className="nav-item">貓罐罐</h2>
-            <h2 className="nav-item">貓罐罐</h2>
+            <div className="can-menu">
+              <button className="nav-item">貓罐頭</button>
+              <div className="can-dropdown">
+                {can.map((item) => {
+                  return <p key={item.id}>{item.title}<br></br></p>;
+                })}
+              </div>
+            </div>
+            <div className="can-menu">
+              <button className="nav-item">貓飼料</button>
+              <div className="can-dropdown">
+                {can.map((item) => {
+                  return <p key={item.id}>{item.title}<br></br></p>;
+                })}
+              </div>
+            </div>
+            <div className="can-menu">
+              <button className="nav-item">貓咪居家用品</button>
+              <div className="can-dropdown">
+                {can.map((item) => {
+                  return <p key={item.id}>{item.title}<br></br></p>;
+                })}
+              </div>
+            </div>
+            <div className="can-menu">
+              <button className="nav-item">貓咪玩具</button>
+              <div className="can-dropdown">
+                {can.map((item) => {
+                  return <p key={item.id}>{item.title}<br></br></p>;
+                })}
+              </div>
+            </div>
           </div>
+
           <div className="nav-wrapper">
             <div className="nav info">
               <img
