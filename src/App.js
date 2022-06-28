@@ -10,7 +10,9 @@ import line2 from "./logo/line2.png";
 import catbg from "./logo/貓咪背景圖.png";
 import { useState } from "react";
 import { can } from "./navitems";
-
+import { food } from "./navitems";
+import { homes } from "./navitems";
+import { toy } from "./navitems";
 function App() {
   const [showinfo, setShowinfo] = useState("");
   const [showcart, setShowcart] = useState("");
@@ -47,7 +49,7 @@ function App() {
           <div className="nav-items">
             <div className="can-menu">
               <button className="nav-item">貓罐頭</button>
-              <div className="can-dropdown">
+              <div className="dropdown can">
                 {can.map((item) => {
                   return <p key={item.id}>{item.title}<br></br></p>;
                 })}
@@ -55,24 +57,24 @@ function App() {
             </div>
             <div className="can-menu">
               <button className="nav-item">貓飼料</button>
-              <div className="can-dropdown">
-                {can.map((item) => {
+              <div className="dropdown food">
+                {food.map((item) => {
                   return <p key={item.id}>{item.title}<br></br></p>;
                 })}
               </div>
             </div>
             <div className="can-menu">
               <button className="nav-item">貓咪居家用品</button>
-              <div className="can-dropdown">
-                {can.map((item) => {
+              <div className="dropdown homes">
+                {homes.map((item) => {
                   return <p key={item.id}>{item.title}<br></br></p>;
                 })}
               </div>
             </div>
             <div className="can-menu">
               <button className="nav-item">貓咪玩具</button>
-              <div className="can-dropdown">
-                {can.map((item) => {
+              <div className="dropdown toy">
+                {toy.map((item) => {
                   return <p key={item.id}>{item.title}<br></br></p>;
                 })}
               </div>
